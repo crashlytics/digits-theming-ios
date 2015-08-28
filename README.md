@@ -25,6 +25,8 @@ The sample show how to set the following:
 3. Accent color
 4. Background image
 
+<img src="screenshot.png" width="400">
+
 ## Compatibility
 
 This project was written in Swift 1.2 and on Xcode 6.4.
