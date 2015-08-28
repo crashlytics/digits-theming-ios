@@ -18,7 +18,7 @@ To get started and run the app, you need to onboard it:
 
 ## Project
 
-The sample show how to set the following:
+The sample shows how to set the following:
 
 1. Logo
 2. Label and Body fonts
