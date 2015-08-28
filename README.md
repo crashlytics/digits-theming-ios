@@ -1,4 +1,4 @@
-# Digits theming samples for iOS
+# Digits theming sample for iOS
 
 This is a sample demonstrating [Digits](http://digits.com) authentication flow [theming] (http://docs.fabric.io/ios/digits/theming.html). Digits is available via [Fabric] (https://fabric.io).
 
