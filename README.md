@@ -14,7 +14,16 @@ To get started and run the app, you need to onboard it:
   * Add the Run Script Build Phase from Fabric.app to the DigitsTheme target
   * Build the project
 5. In Fabric.app, when prompted, ignore the suggested code snippets
-6. In Xcode, run the project. 
+6. In Xcode, run the project.  
+
+## Project
+
+The sample show how to set the following:
+
+1. Logo
+2. Label and Body fonts
+3. Accent color
+4. Background image
 
 ## Compatibility
 
