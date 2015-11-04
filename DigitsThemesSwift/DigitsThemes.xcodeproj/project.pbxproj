@@ -12,19 +12,8 @@
 		04AE18711B7C01AD00F7AE76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AE186F1B7C01AD00F7AE76 /* Main.storyboard */; };
 		04AE18731B7C01AD00F7AE76 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04AE18721B7C01AD00F7AE76 /* Images.xcassets */; };
 		04AE18761B7C01AD00F7AE76 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04AE18741B7C01AD00F7AE76 /* LaunchScreen.xib */; };
-		04AE18821B7C01AD00F7AE76 /* DigitsThemesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE18811B7C01AD00F7AE76 /* DigitsThemesTests.swift */; };
 		B1C9FF2CF7DEB3D7C9A60093 /* libPods-DigitsThemes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB558E1DFA78C58C41A7EA4D /* libPods-DigitsThemes.a */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		04AE187C1B7C01AD00F7AE76 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 04AE185E1B7C01AD00F7AE76 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 04AE18651B7C01AD00F7AE76;
-			remoteInfo = DigitsThemes;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		04AE18661B7C01AD00F7AE76 /* DigitsThemes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitsThemes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,9 +23,6 @@
 		04AE18701B7C01AD00F7AE76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04AE18721B7C01AD00F7AE76 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		04AE18751B7C01AD00F7AE76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		04AE187B1B7C01AD00F7AE76 /* DigitsThemesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigitsThemesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		04AE18801B7C01AD00F7AE76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04AE18811B7C01AD00F7AE76 /* DigitsThemesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitsThemesTests.swift; sourceTree = "<group>"; };
 		40E57AFE88B4333ED402858B /* Pods-DigitsThemes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitsThemes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DigitsThemes/Pods-DigitsThemes.debug.xcconfig"; sourceTree = "<group>"; };
 		D48D7A0EB89B643152411C19 /* Pods-DigitsThemes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitsThemes.release.xcconfig"; path = "Pods/Target Support Files/Pods-DigitsThemes/Pods-DigitsThemes.release.xcconfig"; sourceTree = "<group>"; };
 		FB558E1DFA78C58C41A7EA4D /* libPods-DigitsThemes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DigitsThemes.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,13 +37,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		04AE18781B7C01AD00F7AE76 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -65,7 +44,6 @@
 			isa = PBXGroup;
 			children = (
 				04AE18681B7C01AD00F7AE76 /* DigitsThemes */,
-				04AE187E1B7C01AD00F7AE76 /* DigitsThemesTests */,
 				04AE18671B7C01AD00F7AE76 /* Products */,
 				BDAB961FDCE7C9D6724FD5E2 /* Pods */,
 				C72B697A48D68C6528D6FFD5 /* Frameworks */,
@@ -76,7 +54,6 @@
 			isa = PBXGroup;
 			children = (
 				04AE18661B7C01AD00F7AE76 /* DigitsThemes.app */,
-				04AE187B1B7C01AD00F7AE76 /* DigitsThemesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,23 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				04AE186A1B7C01AD00F7AE76 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		04AE187E1B7C01AD00F7AE76 /* DigitsThemesTests */ = {
-			isa = PBXGroup;
-			children = (
-				04AE18811B7C01AD00F7AE76 /* DigitsThemesTests.swift */,
-				04AE187F1B7C01AD00F7AE76 /* Supporting Files */,
-			);
-			path = DigitsThemesTests;
-			sourceTree = "<group>";
-		};
-		04AE187F1B7C01AD00F7AE76 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				04AE18801B7C01AD00F7AE76 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -158,24 +118,6 @@
 			productReference = 04AE18661B7C01AD00F7AE76 /* DigitsThemes.app */;
 			productType = "com.apple.product-type.application";
 		};
-		04AE187A1B7C01AD00F7AE76 /* DigitsThemesTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 04AE18881B7C01AD00F7AE76 /* Build configuration list for PBXNativeTarget "DigitsThemesTests" */;
-			buildPhases = (
-				04AE18771B7C01AD00F7AE76 /* Sources */,
-				04AE18781B7C01AD00F7AE76 /* Frameworks */,
-				04AE18791B7C01AD00F7AE76 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				04AE187D1B7C01AD00F7AE76 /* PBXTargetDependency */,
-			);
-			name = DigitsThemesTests;
-			productName = DigitsThemesTests;
-			productReference = 04AE187B1B7C01AD00F7AE76 /* DigitsThemesTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -183,15 +125,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Fabric;
 				TargetAttributes = {
 					04AE18651B7C01AD00F7AE76 = {
 						CreatedOnToolsVersion = 6.4;
-					};
-					04AE187A1B7C01AD00F7AE76 = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 04AE18651B7C01AD00F7AE76;
 					};
 				};
 			};
@@ -209,7 +147,6 @@
 			projectRoot = "";
 			targets = (
 				04AE18651B7C01AD00F7AE76 /* DigitsThemes */,
-				04AE187A1B7C01AD00F7AE76 /* DigitsThemesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -222,13 +159,6 @@
 				04AE18711B7C01AD00F7AE76 /* Main.storyboard in Resources */,
 				04AE18761B7C01AD00F7AE76 /* LaunchScreen.xib in Resources */,
 				04AE18731B7C01AD00F7AE76 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04AE18791B7C01AD00F7AE76 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,23 +207,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		04AE18771B7C01AD00F7AE76 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04AE18821B7C01AD00F7AE76 /* DigitsThemesTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		04AE187D1B7C01AD00F7AE76 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 04AE18651B7C01AD00F7AE76 /* DigitsThemes */;
-			targetProxy = 04AE187C1B7C01AD00F7AE76 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		04AE186F1B7C01AD00F7AE76 /* Main.storyboard */ = {
@@ -336,6 +250,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -351,7 +266,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -389,7 +304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -403,6 +318,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DigitsThemes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.fabric.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -414,41 +330,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DigitsThemes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.fabric.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		04AE18891B7C01AD00F7AE76 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = DigitsThemesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DigitsThemes.app/DigitsThemes";
-			};
-			name = Debug;
-		};
-		04AE188A1B7C01AD00F7AE76 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = DigitsThemesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DigitsThemes.app/DigitsThemes";
 			};
 			name = Release;
 		};
@@ -469,15 +352,6 @@
 			buildConfigurations = (
 				04AE18861B7C01AD00F7AE76 /* Debug */,
 				04AE18871B7C01AD00F7AE76 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		04AE18881B7C01AD00F7AE76 /* Build configuration list for PBXNativeTarget "DigitsThemesTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				04AE18891B7C01AD00F7AE76 /* Debug */,
-				04AE188A1B7C01AD00F7AE76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

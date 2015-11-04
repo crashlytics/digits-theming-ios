@@ -11,9 +11,12 @@
 #import <TwitterCore/TWTRAuthConfig.h>
 
 @class UIViewController;
+@class DGTAuthenticationConfiguration;
 @class TWTRAuthConfig;
 @protocol DGTSessionUpdateDelegate;
 @protocol DGTCompletionViewController;
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  *  The `Digits` class contains the main methods to implement the Digits authentication flow.
@@ -40,10 +43,23 @@
 - (void)startWithConsumerKey:(NSString *)consumerKey consumerSecret:(NSString *)consumerSecret;
 
 /**
+ *  Start Digits with a consumer key, secret, and keychain access group. See -[Digits startWithConsumerKey:consumerSecret:]
+ *
+ *  @param consumerKey    Your Digits application's consumer key.
+ *  @param consumerSecret Your Digits application's consumer secret.
+ *  @param accessGroup    An optional keychain access group to apply to session objects stored in the keychain.
+ *
+ *  @note In the majority of situations applications will not need to specify an access group to use with Digits sessions.
+ *  This value is only needed if you plan to share credentials with another application that you control or if you are
+ *  using Digits with an app extension.
+ */
+- (void)startWithConsumerKey:(NSString *)consumerKey consumerSecret:(NSString *)consumerSecret accessGroup:(twtr_nullable NSString *)accessGroup;
+
+/**
  *
  *  @return The Digits user session or nil if there's no authenticated user.
  */
-- (DGTSession *)session;
+- (twtr_nullable DGTSession *)session;
 
 /**
  *  Authentication configuration details. Encapsulates the `consumerKey` and `consumerSecret` credentials required to authenticate a Twitter application.
@@ -68,7 +84,7 @@
  *  @param title      Title for the modal screens. Pass `nil` to use default app name.
  *  @param completion Block called after the authentication flow has ended.
  */
-- (void)authenticateWithTitle:(NSString *)title completion:(DGTAuthenticationCompletion)completion;
+- (void)authenticateWithTitle:(twtr_nullable NSString *)title completion:(DGTAuthenticationCompletion)completion __attribute__((deprecated("Use authenticateWithViewController:configuration:completion: instead.")));;
 
 /**
  *  Starts the authentication flow UI with the standard appearance.
@@ -77,7 +93,7 @@
  *  @param title             Title for the modal screens. Pass `nil` to use default app name.
  *  @param completion        Block called after the authentication flow has ended.
  */
-- (void)authenticateWithViewController:(UIViewController *)viewController title:(NSString *)title completion:(DGTAuthenticationCompletion)completion;
+- (void)authenticateWithViewController:(twtr_nullable UIViewController *)viewController title:(twtr_nullable NSString *)title completion:(DGTAuthenticationCompletion)completion __attribute__((deprecated("Use authenticateWithViewController:configuration:completion: instead.")));;
 
 /**
  *  Starts the authentication flow UI.
@@ -87,7 +103,7 @@
  *  @param title             Title for the modal screens. Pass `nil` to use default app name.
  *  @param completion        Block called after the authentication flow has ended.
  */
-- (void)authenticateWithDigitsAppearance:(DGTAppearance *)appearance viewController:(UIViewController *)viewController title:(NSString *)title completion:(DGTAuthenticationCompletion)completion;
+- (void)authenticateWithDigitsAppearance:(twtr_nullable DGTAppearance *)appearance viewController:(twtr_nullable UIViewController *)viewController title:(twtr_nullable NSString *)title completion:(DGTAuthenticationCompletion)completion __attribute__((deprecated("Use authenticateWithViewController:configuration:completion: instead.")));;
 
 /**
  *  Starts the authentication flow UI using a predetermined phone number.
@@ -98,7 +114,7 @@
  *  @param title             Title for the modal screens. Pass `nil` to use default app name.
  *  @param completion        Block called after the authentication flow has ended.
  */
-- (void)authenticateWithPhoneNumber:(NSString *)phoneNumber digitsAppearance:(DGTAppearance *)appearance viewController:(UIViewController *)viewController title:(NSString *)title completion:(DGTAuthenticationCompletion)completion;
+- (void)authenticateWithPhoneNumber:(twtr_nullable NSString *)phoneNumber digitsAppearance:(twtr_nullable DGTAppearance *)appearance viewController:(twtr_nullable UIViewController *)viewController title:(twtr_nullable NSString *)title completion:(DGTAuthenticationCompletion)completion __attribute__((deprecated("Use authenticateWithViewController:configuration:completion: instead.")));
 
 /**
  *  Starts the authentication flow in your own navigation UI. Digits view controllers will be pushed into the passed navigation controller and after the flow is done, success or failure; the completion view controller will be pushed into the top of the original stack.
@@ -109,7 +125,25 @@
  *  @param title                    Title for the auth screens.
  *  @param completionViewController View controller pushed to the navigation controller when the auth flow is completed
  */
-- (void)authenticateWithNavigationViewController:(UINavigationController *)navigationController phoneNumber:(NSString *)phoneNumber digitsAppearance:(DGTAppearance *)appearance title:(NSString *)title completionViewController:(UIViewController<DGTCompletionViewController> *)completionViewController;
+- (void)authenticateWithNavigationViewController:(UINavigationController *)navigationController phoneNumber:(twtr_nullable NSString *)phoneNumber digitsAppearance:(twtr_nullable DGTAppearance *)appearance title:(twtr_nullable NSString *)title completionViewController:(UIViewController<DGTCompletionViewController> *)completionViewController __attribute__((deprecated("Use authenticateWithNavigationViewController:configuration:completionViewController: instead.")));
+
+/**
+ *  Starts the authentication flow in a modal UI
+ *
+ *  @param viewController    View controller used to present the modal authentication controller. Pass `nil` to use default top-most view controller.
+ *  @param configuration     Options to configure the Digits experience
+ *  @param completion        Block called after the authentication flow has ended.
+ */
+- (void)authenticateWithViewController:(twtr_nullable UIViewController *)viewController configuration:(DGTAuthenticationConfiguration *)configuration completion:(DGTAuthenticationCompletion)completion;
+
+/**
+ *  Starts the authentication flow in your own navigation UI. Digits view controllers will be pushed into the passed navigation controller and after the flow is done, success or failure; the completion view controller will be pushed into the top of the original stack.
+ *
+ *  @param navigationController     Navigation controller used to pushed the Digits view into.
+ *  @param configuration            Options to configure the Digits experience
+ *  @param completionViewController View controller pushed to the navigation controller when the auth flow is completed
+ */
+- (void)authenticateWithNavigationViewController:(UINavigationController *)navigationController configuration:(DGTAuthenticationConfiguration *)configuration completionViewController:(UIViewController<DGTCompletionViewController> *)completionViewController;
 
 /**
  *  Deletes the local Twitter user session from this app. This will not remove the system Twitter account nor make a network request to invalidate the session. Subsequent calls to `authenticateWith` methods will start a new Digits authentication flow.
@@ -117,3 +151,5 @@
 - (void)logOut;
 
 @end
+
+NS_ASSUME_NONNULL_END

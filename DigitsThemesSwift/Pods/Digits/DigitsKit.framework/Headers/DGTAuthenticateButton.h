@@ -7,6 +7,8 @@
 #import <UIKit/UIKit.h>
 #import "DGTSession.h"
 
+@class DGTAppearance;
+
 /**
  *  A button that launches the Digits authentication flow.
  */

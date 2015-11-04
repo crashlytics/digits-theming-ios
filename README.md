@@ -29,7 +29,7 @@ The sample shows how to set the following:
 
 ## Compatibility
 
-This project was written in Swift 1.2 and on Xcode 6.4.
+This project was written in Swift 2 on Xcode 7.
 
 ## License
 
