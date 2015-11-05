@@ -1,18 +1,18 @@
 PODS:
-  - Digits (1.9.0)
-  - Fabric (1.2.8):
-    - Fabric/Base (= 1.2.8)
-  - Fabric/Base (1.2.8)
-  - TwitterCore (1.9.0)
+  - Digits (1.12.0)
+  - Fabric (1.5.5):
+    - Fabric/Base (= 1.5.5)
+  - Fabric/Base (1.5.5)
+  - TwitterCore (1.12.0)
 
 DEPENDENCIES:
-  - Digits (~> 1.9.0)
-  - Fabric (~> 1.2.8)
-  - TwitterCore (~> 1.9.0)
+  - Digits (~> 1.12.0)
+  - Fabric (~> 1.5.5)
+  - TwitterCore (~> 1.12.0)
 
 SPEC CHECKSUMS:
-  Digits: be373967dc2c51917941228d79b231340e2a2dca
-  Fabric: a9eabe53915e9f1db55a84dd2838737928675878
-  TwitterCore: 98ed97a6047c4ef109522840337e815683ead7e5
+  Digits: b443a43657c6cbaa6b31fedddc0e8c15133a978f
+  Fabric: 190bf1a6eb65f7500de1347d027d2e59a7e53db1
+  TwitterCore: a1feadb793512962003ed2bad23e846c8daa4efd
 
 COCOAPODS: 0.38.2

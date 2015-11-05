@@ -21,25 +21,25 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapButton(sender: UIButton) {
-        let appearance = DGTAppearance()
+        let configuration = DGTAuthenticationConfiguration(accountFields: .DefaultOptionMask)
+        configuration.appearance = DGTAppearance()
 
-        appearance.logoImage = UIImage(named: "logo")
+        configuration.appearance.logoImage = UIImage(named: "logo")
         
-        appearance.labelFont = UIFont(name: "HelveticaNeue-Bold", size: 16)
-        appearance.bodyFont = UIFont(name: "HelveticaNeue-Italic", size: 16)
+        configuration.appearance.labelFont = UIFont(name: "HelveticaNeue-Bold", size: 16)
+        configuration.appearance.bodyFont = UIFont(name: "HelveticaNeue-Italic", size: 16)
         
-        appearance.accentColor = UIColor(red:0.33, green:0.67, blue:0.93, alpha:1.0)
-        appearance.backgroundColor = UIColor(patternImage: UIImage(named: "bg-pattern")!)
+        configuration.appearance.accentColor = UIColor(red:0.33, green:0.67, blue:0.93, alpha:1.0)
+        configuration.appearance.backgroundColor = UIColor(patternImage: UIImage(named: "bg-pattern")!)
         
-        Digits.sharedInstance().authenticateWithDigitsAppearance(appearance, viewController: nil, title: nil) { (session, error) in
+        Digits.sharedInstance().authenticateWithViewController(self, configuration: configuration) { (session, error) -> Void in
             if (session != nil) {
                 self.btnLogin.setTitle("Your Digits User ID is " + session.userID, forState: UIControlState.Normal)
             }
             else {
-                println(error.localizedDescription)
+                print(error.localizedDescription)
             }
             
         }
-        
-    }
+   }
 }

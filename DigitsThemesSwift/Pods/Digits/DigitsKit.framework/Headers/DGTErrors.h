@@ -70,6 +70,11 @@ typedef NS_ENUM(NSInteger, DGTErrorCode) {
     /**
      * Something went wrong while looking up contact matches.
      */
-    DGTErrorCodeUnableToLookupContactMatches = 10
+    DGTErrorCodeUnableToLookupContactMatches = 10,
+    
+    /**
+     * Something went wrong while attempting to save the user's email address
+     */
+    DGTErrorCodeUnableToCreateEmailAddress = 11
 
 };

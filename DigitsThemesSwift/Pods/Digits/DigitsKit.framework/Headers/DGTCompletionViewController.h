@@ -5,6 +5,8 @@
 //  Copyright (c) 2015 Twitter Inc. All rights reserved.
 //
 
+@class DGTSession;
+
 /**
  * This protocol is to be implemented by an UIViewController that is pushed into the navigation stack after the Digits non-modal flow is completed.
  */
